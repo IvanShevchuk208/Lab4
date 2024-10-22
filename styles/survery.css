@@ -1,0 +1,443 @@
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #ff9900;
+    --hover-color: #cc7a00;
+    --text-color: #333;
+    --background-color: #f8f9fa;
+    --border-color: #ccc;
+    --font-family: 'Montserrat', sans-serif;
+    --font-size-base: 16px;
+    --border-radius: 0.3125rem;
+    --padding-base: 1.25rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--background-color);
+    font-size: var(--font-size-base);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--padding-base);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--padding-base);
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 0.625rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+nav ul li a.active {
+    background-color: #004d99;
+    padding: 0.625rem;
+    border-radius: var(--border-radius);
+}
+
+.survey-hero {
+    position: relative;
+    background-image: url('../images/hero-travel-poll.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 18.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    transition: filter 0.3s ease;
+}
+
+.survey-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.survey-hero:hover {
+    filter: brightness(0.85);
+}
+
+.survey-hero h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.survey-hero p {
+    font-size: 1.3rem;
+    z-index: 2;
+}
+
+.survey-form {
+    background-color: #f4f4f4;
+    padding: 2.5rem 1.25rem;
+    z-index: 2;
+    border-radius: var(--border-radius);
+}
+
+.survey-form h2 {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.survey-form label {
+    display: block;
+    margin: 0.625rem 0 0.3125rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.survey-form input[type="text"],
+.survey-form input[type="email"],
+.survey-form textarea,
+.survey-form select {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: border-color 0.3s ease;
+}
+
+.survey-form input:focus,
+.survey-form textarea:focus,
+.survey-form select:focus {
+    border-color: var(--secondary-color);
+}
+
+.survey-form textarea {
+    resize: vertical;
+}
+
+.survey-form fieldset {
+    margin: 1.25rem 0;
+    border: none;
+}
+
+.survey-form legend {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.survey-form input[type="radio"] {
+    margin-right: 0.3125rem;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: var(--border-color);
+    color: var(--text-color);
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-left: 0.625rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #bbb;
+    transform: scale(1.05);
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+}
+
+.radio-item input[type="radio"] {
+    margin-right: 0.625rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--padding-base) 0;
+    text-align: center;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+input:required {
+    border-left: 5px solid var(--primary-color);
+}
+
+input:valid, textarea:valid, select:valid {
+    border-color: green;
+}
+
+input:invalid, textarea:invalid, select:invalid {
+    border-color: red;
+}
+
+input:focus:invalid, textarea:focus:invalid, select:focus:invalid {
+    outline: none;
+    border-color: red;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+input:invalid::placeholder {
+    color: red;
+    opacity: 0.7;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin-right: 0.625rem;
+}
+
+nav ul li a {
+    font-size: 1.1rem;
+    padding: 0.625rem 0.9375rem;
+    border-radius: 0.3125rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #004d99;
+    color: white;
+}
+
+.has-submenu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0066cc;
+    border-radius: 0.3125rem;
+    padding: 0.625rem 0;
+    z-index: 1000;
+    width: 200px;
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    display: block;
+    margin: 0;
+}
+
+.submenu li a {
+    display: block;
+    padding: 0.625rem 1.25rem;
+    color: white;
+    text-align: left;
+}
+
+.submenu li a:hover {
+    background-color: #004d99;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #cc7a00;
+}
+
+.scroll-to-top.show {
+    display: block;
+}
+
+.btn-signin {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .btn-signin {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 100px;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: black;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content input {
+    padding: 10px, 5px, 10px, 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-submit {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #004d99;
+}
+
+.btn-register {
+    position: relative;
+    top: 5px;
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #004d99;
+}

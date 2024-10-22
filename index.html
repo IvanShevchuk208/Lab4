@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+    <title>Туристична фірма "Подорож Мрії"</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-plane"></i> Турфірма "Подорож Мрії"</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Головна</a></li>
+                    <li class="has-submenu">
+                        <a href="#"><i class="fas fa-briefcase"></i> Послуги &#9662;</a>
+                        <ul class="submenu">
+                            <li><a href="#">Екскурсійні тури</a></li>
+                            <li><a href="#">Морські круїзи</a></li>
+                            <li><a href="#">Гірськолижні курорти</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="survey.html"><i class="fas fa-poll"></i> Опитування</a></li>
+                    <li><a href="news.html"><i class="fas fa-newspaper"></i> Новини</a></li>
+                    <li><a href="register.html"><i class="fas fa-user"></i> Реєстрація</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Відкрийте світ з нами</h2>
+            <p>Незабутні подорожі по всьому світу. Ми допоможемо здійснити вашу мрію!</p>
+            <a href="survey.html" class="btn-primary"><i class="fas fa-plane-departure"></i> Забронювати тур</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Наші послуги</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <img src="images/excursion.jpg" alt="Екскурсійні тури">
+                    <div class="text-overlay">
+                        <h3><i class="fas fa-map"></i> Екскурсійні тури</h3>
+                        <p>Відвідайте історичні місця та дізнайтесь більше про світ.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/ski.jpg" alt="Гірськолижні курорти">
+                    <div class="text-overlay">
+                        <h3><i class="fas fa-snowflake"></i> Гірськолижні курорти</h3>
+                        <p>Насолоджуйтесь зимовими видами спорту на кращих курортах.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/cruise.jpg" alt="Морські круїзи">
+                    <div class="text-overlay">
+                        <h3><i class="fas fa-ship"></i> Морські круїзи</h3>
+                        <p>Відкрийте для себе красу океанів та морів.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/individual.jpg" alt="Індивідуальні подорожі">
+                    <div class="text-overlay">
+                        <h3><i class="fas fa-user-tie"></i> Індивідуальні подорожі</h3>
+                        <p>Плануємо подорожі відповідно до ваших бажань.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Контакти: <i class="fas fa-envelope"></i> info@dreamtrip.com | <i class="fas fa-phone-alt"></i> Телефон: +38 099 999 9999</p>
+            <p>Усі права захищені &copy; 2024 Турфірма "Подорож Мрії"</p>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">&#9650; Наверх</button>
+
+    <button id="signInBtn" class="btn-signin">Вхід</button>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вхід</h2>
+            <form>
+                <label for="username">ФІО</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="btn-submit">Вхід</button>
+                <button type="button" class="btn-register" onclick="location.href='register.html'">Реєстрація</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
